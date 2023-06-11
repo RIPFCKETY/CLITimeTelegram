@@ -1,0 +1,24 @@
+Add font:
+
+1- Go to fonts.google.com and download the font you want, then install it.
+2- Copy the font file in the path /fonts/.
+3- Open the __main__.py file and go to the end of line 44.
+4- Copy the name of the font file and paste it like this:
+,"/fonts/NameFont.tts"
+
+Add color:
+
+1- Open the colors.txt file and choose your color.
+2- Open the __main__.py file and go to the end of line 45.
+3- Enter your color name like this:
+,"red"
+
+Add photo:
+
+1- Enter the images folder and copy your photo there and remember its name.
+2- Open the __main__.py file and go to the end of line 46.
+3- Enter the name of your photo like this:
+,"NameImage.[image extension]"
+Example:
+,"HelloWorld.jpg"
+
