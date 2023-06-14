@@ -1,0 +1,5 @@
+pyrogram
+apscheduler
+pytz
+Pillow
+TgCrypto
