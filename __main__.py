@@ -3,7 +3,8 @@
 
 from PIL import Image, ImageDraw, ImageFont
 from datetime import datetime
-from pyrogram import Client
+from pyrogram import Client , filters
+from pyrogram.types import Message
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from platform import node, system, release; Node, System, Release = node(), system(), release() 
 from os import system, name; system('clear' if name == 'posix' else 'cls')
@@ -59,6 +60,16 @@ async def SelfTime():
     await account.set_profile_photo(photo="images/time.png")
     print(f"\n{color.green}[INFO]{color.reset} - {color.yellow}Changed{color.reset} - {color.yellow}Time Now : {color.green}{time_now}{color.reset}\n")
 
+@account.on_message(filters.me)
+async def Turnoff(client : Client , message : Message):
+     if message.text == "Turn Off CLI":
+          try:
+              await account.edit_message_text(chat_id=message.chat.id  , message_id=message.id , text=f"Your Message : Turn Off CLI\nResponse CLI : [INFO] CLI Turned Off")
+              exit()
+          except Exception as i:
+            await account.edit_message_text(chat_id=message.chat.id  , message_id=message.id , text=f"Your Message : Turn Off CLI\nResponse CLI : Have Error In Process Turn Off CLI ! \n{i}")
+     else:
+          pass
 scheduler.add_job(SelfTime, "interval", seconds=60)
 scheduler.start()
 account.run()
