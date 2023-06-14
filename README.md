@@ -1,24 +1,33 @@
 ## CLI Time In Profile
   <a href="#"><img src="https://img.shields.io/badge/CLI TIME-Telegram-blue" ></a>
   <a href="https://pypi.org/project/Pyrogram/"><img src="https://img.shields.io/badge/pyrogram-2.0.106-orange" ></a>
+  <a href="https://pypi.org/project/TgCrypto/"><img src="https://img.shields.io/badge/TgCrypto-1.2.5-blue" ></a>
+
   <a href="https://pypi.org/project/pytz/"><img src="https://img.shields.io/badge/pytz-2023.3-green" ></a>
   <a href="https://pypi.org/project/Pillow/"><img src="https://img.shields.io/badge/Pillow-9.4.0-red" ></a>
   <a href="https://pypi.org/project/APScheduler/"><img src="https://img.shields.io/badge/APScheduler-3.10.1-blue" ></a>
+<br>
  * Installation requisites
      
-       # connect to account telegram
-       pip install pyrogram 
-     
-       # run function as time you want
-       pip install apscheduler 
-    
-       # set timezone
-       pip install pytz 
-       
-       # edit images
-       pip install Pillow 
-  
-<ul>
+       # download project from github
+       git clone https://github.com/RIPFCKETY/CLITimeTelegram
+
+       # open folder project
+       cd CLITimeTelegram
+
+       # Install requisites
+       pip install -r requirements.txt
+
+       # edit __maim__.py and replace requisites 
+
+       # run
+       nohup python3 __main__.py &
+
+       # Turn off
+       kill -9 [ps aux]
+
+<br>
+       <ul>
   <li>Add font :</li>
     <ul>
       <li>Go to fonts.google.com and download the font you want, then install it.</li>
@@ -50,6 +59,9 @@
 ,"HelloWorld.jpg"</li>
 </ul>
 <br>
+
+  <li>For Easy Turn Off From Telegram Send <strong>Turn Off CLI </strong> In Save Message</li>
+  <br>
 
 # <li>Sample</li>
 <p align="center"><img src="https://i.imgur.com/8vTnArH.jpg"></p>
