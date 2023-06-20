@@ -59,17 +59,45 @@ async def SelfTime():
     img.save("images/time.png")
     await account.set_profile_photo(photo="images/time.png")
     print(f"\n{color.green}[INFO]{color.reset} - {color.yellow}Changed{color.reset} - {color.yellow}Time Now : {color.green}{time_now}{color.reset}\n")
-
+Change_Profile = True
 @account.on_message(filters.me)
 async def Turnoff(client : Client , message : Message):
+     global Change_Profile
      if message.text == "Turn Off CLI":
           try:
               await account.edit_message_text(chat_id=message.chat.id  , message_id=message.id , text=f"Your Message : Turn Off CLI\nResponse CLI : [INFO] CLI Turned Off")
               exit()
           except Exception as i:
             await account.edit_message_text(chat_id=message.chat.id  , message_id=message.id , text=f"Your Message : Turn Off CLI\nResponse CLI : Have Error In Process Turn Off CLI ! \n{i}")
+     elif message.text == "Change Profile On":
+          Change_Profile = True
+          await account.edit_message_text(chat_id=message.chat.id  , message_id=message.id , text=f"Your Message : Change Profile On\nResponse CLI : [INFO] Change Profile Now Is On")
+     
+     elif message.text == "Change Profile Off":
+          Change_Profile = False
+          await account.edit_message_text(chat_id=message.chat.id  , message_id=message.id , text=f"Your Message : Change Profile Off\nResponse CLI : [INFO] Change Profile Now Is Off")
+     elif message.text == "Delete All Profile":
+          try:
+               photos = [p async for p in account.get_chat_photos("me")]
+               await account.delete_profile_photos([p.file_id for p in photos[1:]])
+               await account.edit_message_text(chat_id=message.chat.id  , message_id=message.id , text=f"Your Message : Delete All Profile\nResponse CLI : [INFO] All Profile Deleted")
+
+          except Exception as i:
+               await account.edit_message_text(chat_id=message.chat.id  , message_id=message.id , text=f"Your Message : Delete All Profile\nResponse CLI : Have Error In Process Delete All Profile ! \n{i}")
+     
+     elif message.text == "Help":
+          await message.reply_text("**__CLI Command 📟__**\n  **Turn Off CLI** : CLI Turn Off\n  **Change Profile On** : The Profile Change Process Turn On \n  **Change Profile Off** : The Profile Change Process Turn Off \n  **Delete All Profile** : Deletes All Profiles")
+
      else:
           pass
-scheduler.add_job(SelfTime, "interval", seconds=60)
+     
+async def main():
+     global Change_Profile
+     if Change_Profile==True:
+        await SelfTime()
+     else:
+          pass
+     
+scheduler.add_job(main, "interval", seconds=10)
 scheduler.start()
 account.run()
