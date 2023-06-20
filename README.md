@@ -60,7 +60,16 @@
 </ul>
 <br>
 
-  <li>For Easy Turn Off From Telegram Send <strong>Turn Off CLI </strong> In Save Message</li>
+<br>
+  <li>Command CLI 📟 :</li>
+    <ul>
+      <li><strong>Turn Off CLI</strong> : CLI Turn Off</li>
+      <li><strong>Change Profile On</strong> : The Profile Change Process Turn On </li>
+      <li><strong>Change Profile Off</strong> : The Profile Change Process Turn Off</li>
+      <li><strong>Delete All Profile</strong> : Deletes All Profiles</li>
+</ul>
+<br>
+
   <br>
 
 # <li>Sample</li>
