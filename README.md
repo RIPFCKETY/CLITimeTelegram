@@ -2,7 +2,6 @@
   <a href="#"><img src="https://img.shields.io/badge/CLI TIME-Telegram-blue" ></a>
   <a href="https://pypi.org/project/Pyrogram/"><img src="https://img.shields.io/badge/pyrogram-2.0.106-orange" ></a>
   <a href="https://pypi.org/project/TgCrypto/"><img src="https://img.shields.io/badge/TgCrypto-1.2.5-blue" ></a>
-
   <a href="https://pypi.org/project/pytz/"><img src="https://img.shields.io/badge/pytz-2023.3-green" ></a>
   <a href="https://pypi.org/project/Pillow/"><img src="https://img.shields.io/badge/Pillow-9.4.0-red" ></a>
   <a href="https://pypi.org/project/APScheduler/"><img src="https://img.shields.io/badge/APScheduler-3.10.1-blue" ></a>
